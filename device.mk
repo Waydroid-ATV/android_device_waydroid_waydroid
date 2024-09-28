@@ -14,13 +14,15 @@
 # limitations under the License.
 #
 
-# Inherit from aosp products.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+PRODUCT_IS_ATV := true
 
-# Inherit some common ROM stuff
-$(call inherit-product-if-exists, vendor/lineage/config/common_full_tablet_wifionly.mk)
-$(call inherit-product-if-exists, vendor/bliss/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+$(call inherit-product, device/google/atv/products/atv_base.mk)
+$(call inherit-product-if-exists, vendor/lineage/config/common_full_tv.mk)
+
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+#$(call inherit-product-if-exists, vendor/lineage/config/common_full_tablet_wifionly.mk)
+#$(call inherit-product-if-exists, vendor/bliss/config/common_full_tablet_wifionly.mk)
 
 # Audio HAL
 PRODUCT_PACKAGES += \
