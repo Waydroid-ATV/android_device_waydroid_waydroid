@@ -135,16 +135,24 @@ PRODUCT_COPY_FILES += \
 ifneq ($(filter %_waydroid_x86 %_waydroid_x86_64,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
     libffmpeg_omx \
-    media_codecs_ffmpeg.xml \
-    i965_drv_video \
-    crocus_drv_video \
-    iHD_drv_video \
-    libgallium_drv_video
-
+    media_codecs_ffmpeg.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.hwaccel=1
+endif
+
+# Media - VA-API
+ifneq ($(filter %_waydroid_x86 %_waydroid_x86_64,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    i965_drv_video \
+    crocus_drv_video \
+    iHD_drv_video \
+    libgallium_drv_video \
+    nouveau_drv_video \
+    radeonsi_drv_video \
+    virtio_gpu_drv_video \
+    vainfo
 endif
 
 # Memtrack
