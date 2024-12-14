@@ -36,6 +36,15 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# TEE
+TARGET_HAS_TEE := false
+
+# Wi-Fi
+BOARD_HAVE_WIFI := false
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := false
+
 # Display
 TARGET_USES_HWC2 := true
 ifneq ($(TARGET_USE_MESA),false)

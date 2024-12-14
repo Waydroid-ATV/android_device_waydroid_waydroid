@@ -20,10 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/google/atv/products/atv_base.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/common_full_tv.mk)
 
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-#$(call inherit-product-if-exists, vendor/lineage/config/common_full_tablet_wifionly.mk)
-#$(call inherit-product-if-exists, vendor/bliss/config/common_full_tablet_wifionly.mk)
-
 # Audio HAL
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
