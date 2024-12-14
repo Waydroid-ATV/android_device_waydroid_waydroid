@@ -98,11 +98,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 endif
 
-# DRM
+# DRM (widevine/clearkey)
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.3-service.clearkey
+    android.hardware.drm@1.4 \
+    android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.4-service.clearkey
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
